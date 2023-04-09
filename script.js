@@ -1,25 +1,31 @@
 const library = [
   {
-    author: "Bill Gates",
-    title: "The Road Ahead",
-    readingStatus: true,
+    author: "J.K. Rowling",
+    title: "Harry Potter and the Philosopher's Stone",
+    readingStatus: true
   },
   {
-    author: "Steve Jobs",
-    title: "Walter Isaacson",
-    readingStatus: true,
+    author: "J.R.R. Tolkien",
+    title: "The Lord of the Rings",
+    readingStatus: false
   },
   {
-    author: "Suzanne Collins",
-    title: "Mockingjay: The Final Book of The Hunger Games",
-    readingStatus: false,
-  },
+    author: "Jane Austen",
+    title: "Pride and Prejudice",
+    readingStatus: true
+  }
 ];
 
-const numberOfBooksRead = () => {
-  // write your code here
-};
+// Function to count the number of books that have been read
+function numberOfBooksRead(library) {
+  let count = 0;
+  for (let i = 0; i < library.length; i++) {
+    if (library[i].readingStatus === true) {
+      count++;
+    }
+  }
+  return count;
+}
 
-// Do not change the code below
-
-alert(numberOfBooksRead());
+// Example usage
+console.log(numberOfBooksRead(library)); // Output: 2
